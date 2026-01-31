@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – Huebbe Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --primary:#667eea;
+      --bg:#0b1020;
+      --text:#e9ecf2;
+      --muted:#a9b0c3;
+      --card:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.12);
+    }
+    
+    *{ box-sizing:border-box }
+    body{
+      font-family:Inter,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.7;
+      margin:0;
+      padding:20px;
+    }
+    .container{
+      max-width:800px;
+      margin:0 auto;
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:40px;
+    }
+    h1{ font-size:32px; margin:0 0 32px }
+    h2{ font-size:20px; margin:32px 0 16px; color:var(--primary) }
+    p{ margin:0 0 16px; color:var(--muted) }
+    a{ color:var(--primary); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .back{ display:inline-block; margin-bottom:24px; color:var(--muted); font-size:14px }
+    
+    @media (max-width:768px){
+      .container{ padding:24px }
+      h1{ font-size:24px }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="back">← Zurück zur Startseite</a>
+    
+    <h1>Impressum</h1>
+    
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+      Christian Hübbe<br>
+      [Deine Straße und Hausnummer]<br>
+      [PLZ] [Ort]<br>
+      Deutschland
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      Email: <a href="mailto:christian@huebbedigital.com">christian@huebbedigital.com</a>
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>
+      Christian Hübbe<br>
+      [Deine Adresse]
+    </p>
+
+    <h2>Haftungsausschluss</h2>
+    
+    <p>
+      <strong>Haftung für Inhalte:</strong><br>
+      Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. 
+      Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte 
+      können wir jedoch keine Gewähr übernehmen.
+    </p>
+
+    <p>
+      <strong>Haftung für Links:</strong><br>
+      Unser Angebot enthält Links zu externen Webseiten Dritter. 
+      Für die Inhalte der verlinkten Seiten ist stets der jeweilige 
+      Anbieter verantwortlich.
+    </p>
+
+    <p>
+      <strong>Urheberrecht:</strong><br>
+      Die Inhalte und Werke auf diesen Seiten unterliegen dem deutschen 
+      Urheberrecht.
+    </p>
+
+    <p style="margin-top:40px; padding-top:24px; border-top:1px solid var(--border); font-size:14px">
+      Stand: Januar 2026
+    </p>
+  </div>
+</body>
+</html>

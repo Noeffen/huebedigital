@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FairwayService – Golf-Club Management App</title>
+  <meta name="description" content="Die moderne Management-App für Golfclubs. Mobile Bestellungen, Live-Updates und Club-Verwaltung." />
+  
+  <link rel="icon" type="image/png" href="/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root{
+      --primary:#16a34a;
+      --bg:#0b1020;
+      --text:#e9ecf2;
+      --muted:#a9b0c3;
+      --card:rgba(255,255,255,.08);
+      --border:rgba(255,255,255,.12);
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0 }
+    body{
+      font-family:Inter,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 10% -10%, rgba(22,163,74,.15), transparent 55%),
+        var(--bg);
+      line-height:1.6;
+    }
+    .container{ max-width:1100px; margin:0 auto; padding:20px }
+    h1{ font-size:clamp(32px,6vw,48px); margin:0 0 16px }
+    h2{ font-size:clamp(24px,5vw,34px); margin:40px 0 20px }
+    p{ color:var(--muted); margin:0 0 16px }
+    a{ color:var(--primary); text-decoration:none }
+    
+    header{ border-bottom:1px solid var(--border); padding:20px 0 }
+    .back{ color:var(--muted); font-size:14px }
+    .back:hover{ color:var(--text) }
+    
+    .hero{ text-align:center; padding:60px 0 }
+    .hero-icon{ font-size:72px; margin-bottom:20px }
+    .status{ 
+      display:inline-block; 
+      padding:8px 16px; 
+      background:rgba(245,158,11,.2); 
+      color:#f59e0b; 
+      border-radius:999px; 
+      font-size:14px; 
+      font-weight:700; 
+      margin:20px 0 
+    }
+    
+    .features{ display:grid; gap:20px; margin:32px 0 }
+    @media (min-width:768px){ .features{ grid-template-columns:repeat(2,1fr) } }
+    
+    .feature-card{ 
+      background:var(--card); 
+      border:1px solid var(--border); 
+      border-radius:14px; 
+      padding:24px 
+    }
+    .feature-card h3{ 
+      display:flex; 
+      align-items:center; 
+      gap:12px; 
+      margin:0 0 12px; 
+      font-size:20px 
+    }
+    
+    .pricing{ 
+      max-width:500px; 
+      margin:40px auto; 
+      background:var(--card); 
+      border:1px solid var(--border); 
+      border-radius:16px; 
+      padding:40px; 
+      text-align:center 
+    }
+    .price{ font-size:56px; font-weight:800; color:var(--primary); margin:20px 0 }
+    .price small{ font-size:24px; color:var(--muted) }
+    
+    .cta{ 
+      display:inline-block; 
+      padding:14px 32px; 
+      background:var(--primary); 
+      color:#fff; 
+      border-radius:10px; 
+      font-weight:700; 
+      margin-top:20px 
+    }
+    .cta:hover{ opacity:.9; text-decoration:none }
+    
+    footer{ 
+      border-top:1px solid var(--border); 
+      padding:40px 0; 
+      text-align:center; 
+      color:var(--muted); 
+      font-size:14px 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="/" class="back">← Zurück</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-icon">🏌️</div>
+        <h1>FairwayService</h1>
+        <p style="font-size:20px; max-width:700px; margin:0 auto 20px">
+          Die moderne Management-App für Golfclubs
+        </p>
+        <span class="status">🚧 In Entwicklung – Launch Q2 2026</span>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Features</h2>
+        <div class="features">
+          <div class="feature-card">
+            <h3><span>📱</span> Mobile Bestellungen</h3>
+            <p>Mitglieder bestellen Gastro & Shop-Artikel direkt vom Platz aus. Mit Lieferung zur Bahn oder Abholung.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3><span>🔔</span> Push Notifications</h3>
+            <p>Echtzeit-Benachrichtigungen für neue Bestellungen und wichtige Club-Updates.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3><span>⚠️</span> Problem-Meldungen</h3>
+            <p>Mitglieder melden Probleme auf dem Platz direkt mit Foto und Standort.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3><span>📊</span> Admin Dashboard</h3>
+            <p>Übersichtliches Dashboard für Club-Betreiber mit Bestellverwaltung und Statistiken.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3><span>🗺️</span> Club-Finder</h3>
+            <p>Interaktive Karte zeigt alle teilnehmenden Clubs im Umkreis mit Radius-Filter.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3><span>🔐</span> QR-Code System</h3>
+            <p>Sichere Authentifizierung am Club-Eingang via QR-Code mit temporären Tokens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 style="text-align:center">Pricing für Clubs</h2>
+        <div class="pricing">
+          <h3 style="margin:0 0 20px">Einfaches Preismodell</h3>
+          <div class="price">€49<small>/Monat</small></div>
+          <ul style="text-align:left; color:var(--muted); line-height:1.9">
+            <li>Alle Features inklusive</li>
+            <li>Unbegrenzte Mitglieder</li>
+            <li>Push Notifications</li>
+            <li>Admin Dashboard</li>
+            <li>Email Support</li>
+            <li>Keine Setup-Kosten</li>
+            <li>Monatlich kündbar</li>
+          </ul>
+          <a href="mailto:christian@huebbedigital.com?subject=FairwayService Demo" class="cta">
+            Demo anfragen
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        © 2026 Huebbe Digital<br>
+        <a href="/imprint.html">Impressum</a> · 
+        <a href="/privacy.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
