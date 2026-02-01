@@ -118,30 +118,42 @@
 
     /* Hero */
     .hero {
-      padding: 120px 0 100px;
+      padding: 140px 0 100px;
       text-align: center;
     }
 
-    .hero-icon {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 32px;
-      background: linear-gradient(135deg, #16A34A, #15803D);
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .hero-banner {
+      width: 100%;
+      max-width: 1200px;
+      height: 400px;
+      margin: 0 auto 56px;
+      background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
+      border-radius: 24px;
+      overflow: hidden;
       box-shadow: 
-        0 4px 16px rgba(22, 163, 74, 0.25),
-        0 12px 48px rgba(22, 163, 74, 0.15);
+        0 8px 32px rgba(22, 163, 74, 0.2),
+        0 24px 64px rgba(22, 163, 74, 0.15);
+      position: relative;
     }
 
-    .hero-icon svg {
-      width: 44px;
-      height: 44px;
-      stroke: white;
-      stroke-width: 2.5;
-      fill: none;
+    .hero-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Placeholder gradient if no image */
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    }
+
+    .hero-icon {
+      display: none;
     }
 
     h1 {
@@ -405,12 +417,12 @@
     <!-- Hero -->
     <section class="hero">
       <div class="container">
-        <div class="hero-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 15C4 15 5 14 8 14C11 14 13 16 16 16C19 16 20 15 20 15V3C20 3 19 4 16 4C13 4 11 2 8 2C5 2 4 3 4 3V15Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M4 22V15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <!-- Banner Image -->
+        <div class="hero-banner">
+          <img src="/fairwayservice/hero-banner.jpg" alt="FairwayService App Vorschau" />
         </div>
+
+        <!-- Content -->
         <h1><span class="gradient-text">FairwayService</span></h1>
         <p class="hero-subtitle">
           Die moderne Management-Plattform für Golfclubs. Von mobilen Bestellungen 
