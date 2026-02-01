@@ -26,8 +26,9 @@
       --gray-500: #737373;
       --gray-600: #525252;
       --gray-900: #171717;
-      --green-500: #16A34A;
-      --green-600: #15803D;
+      --blue-500: #3B82F6;
+      --blue-600: #2563EB;
+      --purple-600: #7C3AED;
     }
 
     html { scroll-behavior: smooth; }
@@ -70,8 +71,18 @@
       gap: 12px;
       font-size: 18px;
       font-weight: 700;
-      color: var(--gray-900);
       text-decoration: none;
+    }
+
+    .brand-text {
+      color: var(--gray-900);
+    }
+
+    .brand-gradient {
+      background: linear-gradient(135deg, var(--blue-500), var(--purple-600));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .nav-cta {
@@ -100,14 +111,14 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      background: linear-gradient(135deg, var(--blue-500), var(--purple-600));
       color: white;
       border: none;
-      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
     }
 
     .btn-primary:hover {
-      box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
       transform: translateY(-2px);
     }
 
@@ -120,12 +131,12 @@
       width: 100%;
       height: 400px;
       margin-bottom: 64px;
-      background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
+      background: linear-gradient(135deg, #3B82F6 0%, #7C3AED 100%);
       border-radius: 24px;
       overflow: hidden;
       box-shadow: 
-        0 8px 32px rgba(22, 163, 74, 0.2),
-        0 24px 64px rgba(22, 163, 74, 0.15);
+        0 8px 32px rgba(59, 130, 246, 0.2),
+        0 24px 64px rgba(124, 60, 237, 0.15);
       position: relative;
     }
 
@@ -157,7 +168,7 @@
     }
 
     .gradient-text {
-      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      background: linear-gradient(135deg, var(--blue-500), var(--purple-600));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -226,10 +237,10 @@
     }
 
     .feature-card:hover {
-      border-color: rgba(22, 163, 74, 0.2);
+      border-color: rgba(59, 130, 246, 0.2);
       box-shadow: 
         0 4px 16px rgba(0, 0, 0, 0.06),
-        0 24px 64px rgba(22, 163, 74, 0.12);
+        0 24px 64px rgba(59, 130, 246, 0.12);
       transform: translateY(-6px);
     }
 
@@ -268,7 +279,7 @@
     }
 
     .price-amount {
-      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      background: linear-gradient(135deg, var(--blue-500), var(--purple-600));
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -302,7 +313,7 @@
 
     .pricing-card li::before {
       content: '✓';
-      color: var(--green-500);
+      color: var(--blue-500);
       font-weight: bold;
       font-size: 20px;
     }
@@ -319,7 +330,7 @@
       align-items: center;
       gap: 12px;
       padding: 18px 40px;
-      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      background: linear-gradient(135deg, var(--blue-500), var(--purple-600));
       color: white;
       text-decoration: none;
       border-radius: 12px;
@@ -327,16 +338,16 @@
       font-weight: 700;
       margin-top: 24px;
       box-shadow: 
-        0 4px 16px rgba(22, 163, 74, 0.25),
-        0 8px 32px rgba(22, 163, 74, 0.15);
+        0 4px 16px rgba(59, 130, 246, 0.25),
+        0 8px 32px rgba(124, 60, 237, 0.15);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .cta-button:hover {
       transform: translateY(-3px);
       box-shadow: 
-        0 8px 24px rgba(22, 163, 74, 0.35),
-        0 16px 48px rgba(22, 163, 74, 0.25);
+        0 8px 24px rgba(59, 130, 246, 0.35),
+        0 16px 48px rgba(124, 60, 237, 0.25);
     }
 
     /* Footer */
@@ -383,7 +394,7 @@
     <div class="container">
       <nav class="nav">
         <a href="/fairwayservice.html" class="brand">
-          <span>FairwayService</span>
+          <span class="brand-text">Fairway</span><span class="brand-gradient">Service</span>
         </a>
         <div class="nav-cta">
           <a href="/" class="btn btn-secondary">← Portfolio</a>
@@ -404,7 +415,7 @@
 
         <!-- Content -->
         <div class="hero-content">
-          <h1><span class="gradient-text">FairwayService</span></h1>
+          <h1><span style="color: var(--gray-900);">Fairway</span><span class="gradient-text">Service</span></h1>
           <p class="hero-subtitle">
             Die moderne Management-Plattform für Golfclubs. Von mobilen Bestellungen 
             über Echtzeit-Updates bis zum vollständigen Admin-Dashboard.
