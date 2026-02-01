@@ -1,1 +1,512 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>NotAlone – Fair-Use & Community</title>
+  <meta name="description" content="Fair & sicher: So schützt NotAlone die Community – Gruppen-Moderation, Meldesystem, Blockieren, Reaktionen & Transparenz." />
 
+  <link rel="icon" type="image/png" href="/notalone/logo2.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gray-50: #FAFAFA;
+      --gray-100: #F5F5F5;
+      --gray-200: #E5E5E5;
+      --gray-500: #737373;
+      --gray-600: #525252;
+      --gray-900: #171717;
+      --blue-500: #3B82F6;
+      --blue-600: #2563EB;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%);
+      color: var(--gray-900);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gray-900);
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary {
+      color: var(--gray-600);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .btn-secondary:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue-500), var(--blue-600));
+      color: white;
+      border: none;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 140px 0 100px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 68px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .hero-subtitle {
+      font-size: 21px;
+      line-height: 1.7;
+      color: var(--gray-600);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Section */
+    section {
+      padding: 100px 0;
+    }
+
+    h2 {
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .section-intro {
+      font-size: 19px;
+      color: var(--gray-600);
+      max-width: 700px;
+      margin-bottom: 64px;
+      line-height: 1.7;
+    }
+
+    /* Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 12px 48px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--gray-600);
+      margin: 0 0 12px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+
+    .card li {
+      font-size: 15px;
+      color: var(--gray-600);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .card li:last-child {
+      border-bottom: none;
+    }
+
+    /* Stages */
+    .stages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .stage {
+      background: white;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .stage-label {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: var(--gray-100);
+      color: var(--gray-900);
+      margin-bottom: 12px;
+    }
+
+    .stage h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .stage p {
+      font-size: 15px;
+      color: var(--gray-600);
+      margin: 0;
+    }
+
+    /* Two column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .two-col {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      padding: 64px 0;
+      text-align: center;
+      background: white;
+    }
+
+    footer p {
+      font-size: 14px;
+      color: var(--gray-500);
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: var(--gray-600);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: var(--gray-900);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      .nav { height: 70px; }
+      .hero { padding: 100px 0 60px; }
+      h1 { font-size: 42px; }
+      section { padding: 60px 0; }
+      h2 { font-size: 36px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .stages { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav">
+        <a href="/notalone/" class="brand">
+          <img src="/notalone/logo2.png" alt="NotAlone" class="logo" />
+          <span>NotAlone</span>
+        </a>
+        <div class="nav-links">
+          <a href="/notalone/" class="btn btn-secondary">← Zurück</a>
+          <a href="https://apps.apple.com/de/app/notalone-gemeinsam-sicher/id6751607235" class="btn btn-primary" target="_blank">App Store</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Fair & verantwortungsvoll</h1>
+        <p class="hero-subtitle">
+          NotAlone schützt die Community: Signale sollen helfen, nicht stören. 
+          Klare Regeln, Moderation und ein transparentes Meldesystem sorgen für Sicherheit – bei vollem Datenschutz.
+        </p>
+      </div>
+    </section>
+
+    <!-- Grundprinzipien -->
+    <section>
+      <div class="container">
+        <h2>Unsere Grundprinzipien</h2>
+        <p class="section-intro">
+          Einfach, respektvoll und sicher – für alle.
+        </p>
+
+        <div class="cards-grid">
+          <div class="card">
+            <h3>Datenschutz zuerst</h3>
+            <p>Keine Werbung, kein Marketing-Tracking. Standort ist nur während aktiver Signale sichtbar – sonst verborgen.</p>
+          </div>
+
+          <div class="card">
+            <h3>Fair-Use</h3>
+            <p>Keine Panikmache oder Spam. Melde Missbrauch direkt in der App – transparent & ohne "Pranger".</p>
+          </div>
+
+          <div class="card">
+            <h3>Relevanz</h3>
+            <p>Gruppen & Umkreis stellen sicher: Nur Menschen, die es betrifft, werden informiert.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reaktionen -->
+    <section style="background: linear-gradient(180deg, white 0%, var(--gray-50) 100%);">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <h2>Reaktionen – anonym & sicher</h2>
+            <p class="section-intro" style="margin-bottom: 32px;">
+              Auf Signale reagieren Mitglieder mit klaren, anonymen Stati. 
+              Absender:innen sehen nur Summen, keine Namen, keine Chats.
+            </p>
+
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">
+                <strong>Gesehen</strong> – dein Signal wurde wahrgenommen
+              </li>
+              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">
+                <strong>In der Nähe</strong> – jemand ist vor Ort
+              </li>
+              <li style="padding: 16px 0;">
+                <strong>Ich hole Hilfe</strong> – Unterstützung ist organisiert
+              </li>
+            </ul>
+
+            <p style="margin-top: 24px; font-size: 15px; color: var(--gray-600);">
+              NotAlone ist kein soziales Netzwerk – kein Chat, keine Diskussionen. 
+              Fokus: Information & Hilfe.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Im Notfall: 112</h3>
+            <p>NotAlone ersetzt nicht den Notruf. Wenn Gefahr besteht oder akute Hilfe benötigt wird: <strong>immer zuerst 112</strong> anrufen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gruppen & Moderation -->
+    <section>
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <h2>Gruppen & Moderation</h2>
+            <p class="section-intro" style="margin-bottom: 32px;">
+              Für Wandergruppen, Nachbarschaften, Pflegeteams oder Vereine: 
+              Nur relevante Warnungen im passenden Umkreis.
+            </p>
+
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">
+                <strong>Einladungen & Rollen</strong> – Admins, Mitglieder, Gäste
+              </li>
+              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">
+                <strong>Push-Einstellungen</strong> – alle / nur mit Standort / keine
+              </li>
+              <li style="padding: 16px 0;">
+                <strong>Moderations-Tools</strong> – Mitglieder verwalten, Signale prüfen
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Fair & lokal</h3>
+            <p>Pushs erhalten nur Gruppenmitglieder im Signal-Radius. Öffentlich wird ein Signal erst mit aktivierter Umkreis-Sichtbarkeit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missbrauchsschutz -->
+    <section style="background: linear-gradient(180deg, white 0%, var(--gray-50) 100%);">
+      <div class="container">
+        <h2>Missbrauchsschutz</h2>
+        <p class="section-intro">
+          Mehrere unabhängige Meldungen aktivieren Stufen, die das erneute Senden 
+          vorübergehend begrenzen – niemals das Empfangen.
+        </p>
+
+        <div class="stages">
+          <div class="stage">
+            <span class="stage-label">Stufe 0</span>
+            <h3>Hinweis</h3>
+            <p>Einzelne Meldung – keine Einschränkung, aber Signal wird intern markiert.</p>
+          </div>
+
+          <div class="stage">
+            <span class="stage-label">Stufe 1</span>
+            <h3>Pause 10 Min</h3>
+            <p>Bei mehreren Meldungen in kurzer Zeit.</p>
+          </div>
+
+          <div class="stage">
+            <span class="stage-label">Stufe 2</span>
+            <h3>Pause 30 Min</h3>
+            <p>Erneute Mehrfachmeldungen.</p>
+          </div>
+
+          <div class="stage">
+            <span class="stage-label">Stufe 3</span>
+            <h3>Bis 24h</h3>
+            <p>Wiederholter Missbrauch; Admin-Review empfohlen.</p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 48px; max-width: 900px; margin-left: auto; margin-right: auto;">
+          <h3>Transparenz & Fairness</h3>
+          <p>Die Stufen greifen nur bei mehreren unabhängigen Meldungen. Echte Notfälle bleiben immer möglich. Gruppen-Admins können auffällige Mitglieder kontaktieren oder entfernen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blockieren -->
+    <section>
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <h2>Blockieren & Ausblenden</h2>
+            <p class="section-intro" style="margin-bottom: 32px;">
+              Wer dich stört, wird stummgeschaltet – jederzeit rückgängig.
+            </p>
+
+            <ul style="list-style: none; padding: 0;">
+              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">
+                Keine Marker mehr auf der Karte
+              </li>
+              <li style="padding: 16px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.06);">
+                Keine Einträge in Listen
+              </li>
+              <li style="padding: 16px 0;">
+                Keine Push-Benachrichtigungen
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Rückgängig machen</h3>
+            <p>In der App: Einstellungen → Datenschutz → Ausgeblendete Inhalte.</p>
+            <p style="margin-top: 16px; font-size: 15px; color: var(--gray-600);">
+              Du kannst einzelne Signale oder ganze Absender:innen ausblenden – flexibel & reversibel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Christian Hübbe</p>
+      <p>
+        <a href="/imprint.html">Impressum</a> · 
+        <a href="/privacy.html">Datenschutz</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
