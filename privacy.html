@@ -1,358 +1,370 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutzerklärung – Huebbe Digital</title>
-  <meta name="description" content="Datenschutzerklärung und Informationen zum Datenschutz" />
-
-  <link rel="icon" type="image/png" href="/logo.png">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --gray-50: #FAFAFA;
-      --gray-100: #F5F5F5;
-      --gray-500: #737373;
-      --gray-600: #525252;
-      --gray-900: #171717;
-      --blue-500: #3B82F6;
-      --blue-600: #2563EB;
-    }
-
-    html { scroll-behavior: smooth; }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(180deg, #FAFAFA 0%, #FFFFFF 100%);
-      color: var(--gray-900);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    /* Header */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80px;
-    }
-
-    .brand {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--gray-900);
-      text-decoration: none;
-    }
-
-    .btn {
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      color: var(--gray-600);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      background: white;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-      transition: all 0.3s ease;
-    }
-
-    .btn:hover {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    /* Content */
-    main {
-      padding: 100px 0;
-    }
-
-    .content-card {
-      background: white;
-      border: 1px solid rgba(0, 0, 0, 0.06);
-      border-radius: 24px;
-      padding: 64px;
-      box-shadow: 
-        0 2px 8px rgba(0, 0, 0, 0.04),
-        0 12px 48px rgba(0, 0, 0, 0.05);
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-top: 48px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      font-size: 22px;
-      font-weight: 600;
-      margin-top: 32px;
-      margin-bottom: 16px;
-    }
-
-    p {
-      font-size: 17px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       line-height: 1.7;
-      color: var(--gray-600);
-      margin-bottom: 16px;
+      color: #333;
+      background: #fafafa;
+      padding: 20px;
     }
-
-    ul {
-      margin: 16px 0;
-      padding-left: 24px;
-      color: var(--gray-600);
-    }
-
-    li {
-      font-size: 17px;
-      line-height: 1.7;
-      margin-bottom: 8px;
-    }
-
-    a {
-      color: var(--blue-600);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    a:hover {
-      color: var(--blue-500);
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      padding: 64px 0;
-      text-align: center;
-      background: white;
-    }
-
-    footer p {
-      font-size: 14px;
-      color: var(--gray-500);
-      margin-bottom: 12px;
-    }
-
-    footer a {
-      color: var(--gray-600);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--gray-900);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .container { padding: 0 20px; }
-      .nav { height: 70px; }
-      main { padding: 60px 0; }
-      .content-card { padding: 32px; }
-      h1 { font-size: 36px; }
-      h2 { font-size: 24px; }
-      h3 { font-size: 20px; }
-    }
+    .container { max-width: 900px; margin: 0 auto; background: white; padding: 60px; border-radius: 8px; }
+    h1 { font-size: 42px; margin-bottom: 16px; }
+    h2 { font-size: 32px; margin: 48px 0 24px; border-bottom: 2px solid #3B82F6; padding-bottom: 8px; }
+    h3 { font-size: 24px; margin: 32px 0 16px; color: #3B82F6; }
+    h4 { font-size: 18px; margin: 24px 0 12px; font-weight: 600; }
+    p { margin-bottom: 16px; }
+    ul, ol { margin: 16px 0 24px 24px; }
+    li { margin-bottom: 8px; }
+    .highlight { background: #eff6ff; border-left: 4px solid #3B82F6; padding: 20px; margin: 24px 0; }
+    .highlight strong { display: block; margin-bottom: 8px; color: #1e40af; }
+    table { width: 100%; border-collapse: collapse; margin: 24px 0; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background: #f3f4f6; font-weight: 600; }
+    a { color: #3B82F6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav class="nav">
-        <a href="/" class="brand">Huebbe Digital</a>
-        <a href="/" class="btn">← Zurück</a>
-      </nav>
+  <div class="container">
+    <h1>Datenschutzerklärung</h1>
+    <p><strong>Stand: Februar 2026</strong></p>
+    
+    <div class="highlight">
+      <strong>Ihre Privatsphäre ist uns wichtig</strong>
+      <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und behandeln diese vertraulich sowie entsprechend der gesetzlichen Datenschutzvorschriften und dieser Datenschutzerklärung.</p>
     </div>
-  </header>
 
-  <main>
-    <div class="container">
-      <div class="content-card">
-        <h1>Datenschutzerklärung</h1>
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortlich für die Datenverarbeitung auf dieser Website und in unseren Apps ist:</p>
+    <p>
+      <strong>Christian Hübbe</strong><br>
+      Kurt-Schumacher-Straße 76<br>
+      67663 Kaiserslautern<br>
+      Deutschland
+    </p>
+    <p>E-Mail: <a href="mailto:christian@huebbedigital.com">christian@huebbedigital.com</a></p>
 
-        <h2>1. Datenschutz auf einen Blick</h2>
+    <h2>2. Geltungsbereich</h2>
+    <p>Diese Datenschutzerklärung gilt für:</p>
+    <ul>
+      <li>Die Website <strong>huebbedigital.com</strong> und alle Unterseiten</li>
+      <li>Die mobile App <strong>FairwayService</strong> (iOS & Android)</li>
+      <li>Die mobile App <strong>NotAlone</strong> (iOS & Android)</li>
+    </ul>
 
-        <h3>Allgemeine Hinweise</h3>
-        <p>
-          Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren 
-          personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene 
-          Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-        </p>
+    <h2>3. Allgemeine Informationen zur Datenverarbeitung</h2>
+    
+    <h3>3.1 Umfang der Verarbeitung personenbezogener Daten</h3>
+    <p>Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website und App sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung personenbezogener Daten erfolgt regelmäßig nur nach Einwilligung des Nutzers.</p>
 
-        <h3>Datenerfassung auf dieser Website</h3>
-        <p><strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong></p>
-        <p>
-          Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. 
-          Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
-        </p>
+    <h3>3.2 Rechtsgrundlage für die Verarbeitung</h3>
+    <p>Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient <strong>Art. 6 Abs. 1 lit. a DSGVO</strong> als Rechtsgrundlage.</p>
+    <p>Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages erforderlich ist, dient <strong>Art. 6 Abs. 1 lit. b DSGVO</strong> als Rechtsgrundlage.</p>
+    <p>Soweit eine Verarbeitung zur Wahrung eines berechtigten Interesses erforderlich ist, dient <strong>Art. 6 Abs. 1 lit. f DSGVO</strong> als Rechtsgrundlage.</p>
 
-        <p><strong>Wie erfassen wir Ihre Daten?</strong></p>
-        <p>
-          Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. 
-          Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
-        </p>
+    <h3>3.3 Datenlöschung und Speicherdauer</h3>
+    <p>Die personenbezogenen Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt.</p>
 
-        <p>
-          Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website 
-          durch unsere IT-Systeme erfasst. Das sind vor allem technische Daten (z.B. Internetbrowser, 
-          Betriebssystem oder Uhrzeit des Seitenaufrufs).
-        </p>
+    <h2>4. Bereitstellung der Website</h2>
+    
+    <h3>4.1 Hosting</h3>
+    <p>Unsere Website wird über <strong>GitHub Pages</strong> gehostet (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA).</p>
+    
+    <p><strong>Verarbeitete Daten:</strong> IP-Adresse, Datum und Uhrzeit, Browserinformationen, angeforderte Seiten</p>
+    <p><strong>Zweck:</strong> Technische Bereitstellung der Website</p>
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO</p>
+    <p><strong>Speicherdauer:</strong> Maximal 7 Tage</p>
 
-        <h2>2. Hosting</h2>
+    <h3>4.2 SSL/TLS-Verschlüsselung</h3>
+    <p>Diese Website nutzt SSL/TLS-Verschlüsselung für sichere Datenübertragung. Eine verschlüsselte Verbindung erkennen Sie am Schloss-Symbol in der Browserzeile.</p>
 
-        <h3>GitHub Pages</h3>
-        <p>
-          Diese Website wird auf GitHub Pages gehostet. Anbieter ist die GitHub Inc., 
-          88 Colin P Kelly Jr St, San Francisco, CA 94107, USA.
-        </p>
+    <h3>4.3 Cookies</h3>
+    <p>Unsere Website verwendet <strong>keine Cookies</strong>.</p>
 
-        <p>
-          GitHub erfasst aus den Logfiles folgende Daten:
-        </p>
-        <ul>
-          <li>Besuchte Seite auf unserer Website</li>
-          <li>Zeit zum Zeitpunkt des Zugriffes</li>
-          <li>Menge der gesendeten Daten in Byte</li>
-          <li>Quelle/Verweis, von welchem Sie auf die Seite gelangten</li>
-          <li>Verwendeter Browser</li>
-          <li>Verwendetes Betriebssystem</li>
-          <li>Verwendete IP-Adresse</li>
-        </ul>
+    <h2>5. Firebase-Dienste (Google LLC)</h2>
+    <p>Unsere Apps nutzen verschiedene Dienste von Firebase (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA).</p>
 
-        <p>
-          Die Datenverarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. 
-          Der Websitebetreiber hat ein berechtigtes Interesse an einer technisch fehlerfreien 
-          Darstellung und der Optimierung seiner Website.
-        </p>
-
-        <p>
-          Weitere Informationen zu GitHub Pages finden Sie hier: 
-          <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" target="_blank" rel="noopener">
-            GitHub Pages Dokumentation
-          </a>
-        </p>
-
-        <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
-
-        <h3>Datenschutz</h3>
-        <p>
-          Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. 
-          Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen 
-          Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-        </p>
-
-        <h3>Hinweis zur verantwortlichen Stelle</h3>
-        <p>
-          Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
-        </p>
-        <p>
-          Christian Hübbe<br>
-          Kurt-Schumacher-Straße 76<br>
-          67663 Kaiserslautern<br>
-          Deutschland
-        </p>
-        <p>
-          E-Mail: <a href="mailto:christian@huebbedigital.com">christian@huebbedigital.com</a>
-        </p>
-
-        <h3>Speicherdauer</h3>
-        <p>
-          Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, 
-          verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung 
-          entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung 
-          zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht.
-        </p>
-
-        <h3>Ihre Rechte</h3>
-        <p>Sie haben jederzeit das Recht:</p>
-        <ul>
-          <li>Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten zu erhalten</li>
-          <li>Berichtigung unrichtiger personenbezogener Daten zu verlangen</li>
-          <li>Löschung Ihrer bei uns gespeicherten personenbezogenen Daten zu verlangen</li>
-          <li>Einschränkung der Datenverarbeitung zu verlangen</li>
-          <li>Widerspruch gegen die Verarbeitung einzulegen</li>
-          <li>Datenübertragbarkeit zu verlangen</li>
-        </ul>
-
-        <h3>SSL- bzw. TLS-Verschlüsselung</h3>
-        <p>
-          Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher 
-          Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie 
-          daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an 
-          dem Schloss-Symbol in Ihrer Browserzeile.
-        </p>
-
-        <h2>4. Kontaktformular</h2>
-        <p>
-          Wenn Sie uns per E-Mail Anfragen zukommen lassen, werden Ihre Angaben aus der 
-          E-Mail inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung 
-          der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
-        </p>
-
-        <p>
-          Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, 
-          sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung 
-          vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die 
-          Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an 
-          uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
-        </p>
-
-        <h2>5. Änderung der Datenschutzerklärung</h2>
-        <p>
-          Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den 
-          aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen 
-          in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue 
-          Datenschutzerklärung.
-        </p>
-
-        <p style="margin-top: 48px; font-size: 15px; color: var(--gray-500);">
-          Stand: Februar 2026
-        </p>
-      </div>
+    <div class="highlight">
+      <strong>Wichtig:</strong>
+      <p>Alle Firebase-Daten werden in Rechenzentren in der <strong>Europäischen Union (EU)</strong> gespeichert (europe-west3). Wir haben Standardvertragsklauseln mit Google abgeschlossen.</p>
     </div>
-  </main>
 
-  <footer>
-    <div class="container">
-      <p>© 2026 Christian Hübbe</p>
-      <p>
-        <a href="/imprint.html">Impressum</a> · 
-        <a href="/privacy.html">Datenschutz</a>
-      </p>
+    <h3>5.1 Firebase Authentication</h3>
+    <p><strong>Zweck:</strong> Sichere Authentifizierung von Nutzern</p>
+    <p><strong>Verarbeitete Daten:</strong></p>
+    <ul>
+      <li>E-Mail-Adresse</li>
+      <li>Verschlüsseltes Passwort</li>
+      <li>Nutzer-ID (automatisch generiert)</li>
+      <li>Zeitstempel der Registrierung und letzten Anmeldung</li>
+    </ul>
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO</p>
+    <p><strong>Speicherort:</strong> EU (europe-west3)</p>
+    <p><strong>Speicherdauer:</strong> Bis zur Account-Löschung</p>
+
+    <h3>5.2 Cloud Firestore (Datenbank)</h3>
+    <p><strong>Zweck:</strong> Speicherung von App-Daten</p>
+    
+    <h4>FairwayService speichert:</h4>
+    <ul>
+      <li>Benutzerprofil (Name, Club-Zugehörigkeit)</li>
+      <li>Bestellungen (Produkte, Menge, Status, Zeitstempel)</li>
+      <li>Problem-Meldungen (Beschreibung, Standort, Fotos, Status)</li>
+      <li>QR-Code-Tokens (temporär, 30 Minuten Gültigkeit)</li>
+      <li>Push-Token für Benachrichtigungen</li>
+    </ul>
+
+    <h4>NotAlone speichert:</h4>
+    <ul>
+      <li>Benutzerprofil (anonymisierte Nutzer-ID)</li>
+      <li>Signale (Text, Standortdaten, Zeitstempel, Sichtbarkeit)</li>
+      <li>Gruppenmitgliedschaften</li>
+      <li>Notfallkontakte (E-Mail-Adressen, verschlüsselt)</li>
+      <li>Push-Token</li>
+      <li>Präferenzen (Radius, Benachrichtigungen)</li>
+    </ul>
+
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO</p>
+    <p><strong>Speicherort:</strong> EU (europe-west3)</p>
+
+    <h3>5.3 Cloud Storage</h3>
+    <p><strong>Zweck:</strong> Speicherung von Medieninhalten</p>
+    
+    <h4>FairwayService:</h4>
+    <ul>
+      <li>Fotos von Problem-Meldungen</li>
+      <li>Profilbilder (optional)</li>
+    </ul>
+
+    <h4>NotAlone:</h4>
+    <ul>
+      <li>Sprachmemos (Audio-Aufnahmen)</li>
+      <li>Temporäre PDF-Dateien</li>
+    </ul>
+
+    <p><strong>Speicherdauer:</strong></p>
+    <ul>
+      <li>Problem-Fotos: 90 Tage nach Erledigung</li>
+      <li>Sprachmemos: 10 Tage automatische Löschung</li>
+      <li>PDF-Exporte: Sofortige Löschung nach Download</li>
+    </ul>
+
+    <h3>5.4 Cloud Functions</h3>
+    <p><strong>Zweck:</strong> Automatisierte Serverlogik</p>
+    <ul>
+      <li>Versand von Push-Benachrichtigungen</li>
+      <li>Versand von Notfall-E-Mails (NotAlone)</li>
+      <li>Automatische Löschung abgelaufener Daten</li>
+      <li>Account-Löschung auf Nutzeranfrage</li>
+    </ul>
+
+    <h3>5.5 Firebase Cloud Messaging (Push)</h3>
+    <p><strong>Zweck:</strong> Versand von Push-Benachrichtigungen</p>
+    <p><strong>Verarbeitete Daten:</strong> Device-Token, Benachrichtigungsinhalt, Zustellungsstatus</p>
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
+    <p><strong>Widerruf:</strong> Jederzeit in den App-Einstellungen möglich</p>
+
+    <h2>6. Standortdaten (NotAlone)</h2>
+    
+    <div class="highlight">
+      <strong>Besonders sensible Daten</strong>
+      <p>Standortdaten gehören zu den besonders schützenswerten Daten. Wir verarbeiten diese nur mit Ihrer ausdrücklichen Einwilligung.</p>
     </div>
-  </footer>
+
+    <h3>6.1 Arten von Standortdaten</h3>
+    
+    <h4>Präziser Standort:</h4>
+    <ul>
+      <li>GPS-Koordinaten (Latitude, Longitude)</li>
+      <li>Genauigkeit: bis zu 5 Meter</li>
+      <li>Verwendung: Umkreis-basierte Signale, genaue Standortfreigabe</li>
+    </ul>
+
+    <h4>Approximativer Standort:</h4>
+    <ul>
+      <li>Ungefährer Standort (Mobilfunkmasten/WLAN)</li>
+      <li>Genauigkeit: 100-1000 Meter</li>
+      <li>Verwendung: Nicht-präzise Signale</li>
+    </ul>
+
+    <h3>6.2 Verwendungszwecke</h3>
+    <ul>
+      <li><strong>Signal-Versand:</strong> Standort wird bei Erstellung erfasst</li>
+      <li><strong>Umkreis-Benachrichtigungen:</strong> Andere Nutzer im Umkreis werden benachrichtigt (optional)</li>
+      <li><strong>Live-Tracking:</strong> Kontinuierliche Standortübertragung für Tracking-Links</li>
+    </ul>
+
+    <h3>6.3 Standort-Einstellungen</h3>
+    <p>Sie können wählen:</p>
+    <ul>
+      <li><strong>"Niemals":</strong> Keine Standortdaten</li>
+      <li><strong>"Während der Nutzung":</strong> Nur bei aktiver App</li>
+      <li><strong>"Immer":</strong> Auch im Hintergrund (nur für Live-Tracking)</li>
+    </ul>
+
+    <p><strong>Sichtbarkeitsoptionen:</strong></p>
+    <ul>
+      <li><strong>Öffentlich:</strong> Alle im Radius sehen Signal</li>
+      <li><strong>Nur Gruppen:</strong> Nur Gruppenmitglieder</li>
+      <li><strong>Nur Notfallkontakte:</strong> Niemand sieht Signal (nur E-Mail)</li>
+    </ul>
+
+    <h3>6.4 Speicherdauer</h3>
+    <ul>
+      <li>Signale: Maximal 10 Minuten (automatisch gelöscht)</li>
+      <li>Live-Tracking: Nur während aktiver Session</li>
+      <li>Standort-Historie: Wird NICHT gespeichert</li>
+    </ul>
+
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
+    <p><strong>Widerruf:</strong> Jederzeit in iOS/Android-Einstellungen</p>
+
+    <h2>7. E-Mail-Versand (Brevo)</h2>
+    <p>Für Notfall-E-Mails (NotAlone) nutzen wir <strong>Brevo</strong> (Brevo SAS, 7 rue de Madrid, 75008 Paris, Frankreich).</p>
+
+    <p><strong>Verarbeitete Daten:</strong></p>
+    <ul>
+      <li>E-Mail-Adresse des Empfängers (Notfallkontakt)</li>
+      <li>Nachrichteninhalt (Signaltext, Tracking-Link)</li>
+      <li>Versandzeitpunkt</li>
+    </ul>
+
+    <p><strong>Zweck:</strong> Versand von Notfall-Benachrichtigungen</p>
+    <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO</p>
+    <p><strong>Speicherort:</strong> EU (Frankreich)</p>
+    <p><strong>Speicherdauer:</strong> 7 Tage (Versandprotokoll)</p>
+
+    <h2>8. Ihre Rechte als betroffene Person</h2>
+
+    <h3>8.1 Auskunftsrecht (Art. 15 DSGVO)</h3>
+    <p>Sie haben das Recht, Auskunft über Ihre gespeicherten Daten zu verlangen.</p>
+
+    <h3>8.2 Recht auf Berichtigung (Art. 16 DSGVO)</h3>
+    <p>Sie können die Berichtigung unrichtiger Daten verlangen.</p>
+
+    <h3>8.3 Recht auf Löschung (Art. 17 DSGVO)</h3>
+    <p>Sie können Ihren Account direkt in der App löschen:</p>
+    <ul>
+      <li><strong>FairwayService:</strong> Einstellungen → Account löschen</li>
+      <li><strong>NotAlone:</strong> Einstellungen → Account löschen</li>
+    </ul>
+    
+    <p>Bei Account-Löschung werden <strong>unwiderruflich gelöscht</strong>:</p>
+    <ul>
+      <li>Ihr Benutzerkonto und Authentifizierungsdaten</li>
+      <li>Alle persönlichen Daten in der Datenbank</li>
+      <li>Alle hochgeladenen Medien (Fotos, Audio)</li>
+      <li>Alle Push-Token</li>
+      <li>Gruppenmitgliedschaften</li>
+    </ul>
+
+    <h3>8.4 Recht auf Einschränkung (Art. 18 DSGVO)</h3>
+    <p>Sie können die Einschränkung der Verarbeitung verlangen.</p>
+
+    <h3>8.5 Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h3>
+    <p>Sie können Ihre Daten in maschinenlesbarem Format erhalten.</p>
+    <p><strong>NotAlone:</strong> Signal-Historie als PDF exportieren (Signal-Übersicht → Export)</p>
+
+    <h3>8.6 Widerspruchsrecht (Art. 21 DSGVO)</h3>
+    <p>Sie können jederzeit Widerspruch gegen die Verarbeitung einlegen.</p>
+
+    <h3>8.7 Widerruf der Einwilligung</h3>
+    <p>Sie können erteilte Einwilligungen jederzeit widerrufen.</p>
+
+    <h3>8.8 Beschwerderecht</h3>
+    <p>Sie können sich bei einer Datenschutz-Aufsichtsbehörde beschweren.</p>
+    <p><strong>Zuständige Aufsichtsbehörde:</strong></p>
+    <p>
+      Der Landesbeauftragte für den Datenschutz und die Informationsfreiheit Rheinland-Pfalz<br>
+      Hintere Bleiche 34<br>
+      55116 Mainz<br>
+      E-Mail: <a href="mailto:poststelle@datenschutz.rlp.de">poststelle@datenschutz.rlp.de</a>
+    </p>
+
+    <h2>9. Datensicherheit</h2>
+    
+    <h3>9.1 Technische Maßnahmen</h3>
+    <ul>
+      <li><strong>Verschlüsselung:</strong> Alle Übertragungen via SSL/TLS</li>
+      <li><strong>Passwörter:</strong> Gehashed mit bcrypt, niemals Klartext</li>
+      <li><strong>Firebase Security Rules:</strong> Strenge Zugriffskontrollen</li>
+      <li><strong>EU-Rechenzentren:</strong> Alle Daten nur in der EU</li>
+      <li><strong>Datenminimierung:</strong> Nur notwendigste Daten</li>
+    </ul>
+
+    <h3>9.2 Organisatorische Maßnahmen</h3>
+    <ul>
+      <li>Zugriffsbeschränkung auf Entwicklerkonten</li>
+      <li>Regelmäßige Sicherheitsüberprüfungen</li>
+      <li>Verschlüsselte Backups</li>
+      <li>Incident-Response-Plan</li>
+    </ul>
+
+    <h3>9.3 Automatische Datenlöschung</h3>
+    <ul>
+      <li><strong>NotAlone Signale:</strong> Nach 10 Minuten</li>
+      <li><strong>Sprachmemos:</strong> Nach 10 Tagen</li>
+      <li><strong>QR-Tokens:</strong> Nach 30 Minuten</li>
+      <li><strong>Problem-Fotos:</strong> 90 Tage nach Erledigung</li>
+      <li><strong>Inaktive Accounts:</strong> Nach 2 Jahren (mit E-Mail-Benachrichtigung)</li>
+    </ul>
+
+    <h2>10. Weitergabe an Dritte</h2>
+    
+    <p>Wir geben Ihre Daten nur an Dritte weiter, wenn dies gesetzlich erlaubt oder von Ihnen ausdrücklich gewünscht ist.</p>
+
+    <h3>10.1 Auftragsverarbeiter</h3>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Dienstleister</th>
+          <th>Zweck</th>
+          <th>Standort</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google LLC (Firebase)</td>
+          <td>App-Backend, Datenbank</td>
+          <td>EU (europe-west3)</td>
+        </tr>
+        <tr>
+          <td>Brevo SAS</td>
+          <td>E-Mail-Versand</td>
+          <td>EU (Frankreich)</td>
+        </tr>
+        <tr>
+          <td>GitHub, Inc.</td>
+          <td>Website-Hosting</td>
+          <td>USA (Standardvertragsklauseln)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Mit allen Auftragsverarbeitern haben wir Verträge gemäß Art. 28 DSGVO geschlossen.</p>
+
+    <h2>11. Kinder und Jugendliche</h2>
+    <p>Unsere Dienste richten sich an Personen ab 16 Jahren. Personen unter 16 Jahren benötigen die Zustimmung der Erziehungsberechtigten.</p>
+
+    <h2>12. Änderungen dieser Datenschutzerklärung</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, um aktuellen rechtlichen Anforderungen zu entsprechen.</p>
+    <p><strong>Stand:</strong> Februar 2026</p>
+
+    <h2>13. Kontakt zum Datenschutz</h2>
+    <p>Bei Fragen können Sie sich jederzeit an uns wenden:</p>
+    <p>
+      <strong>E-Mail:</strong> <a href="mailto:christian@huebbedigital.com">christian@huebbedigital.com</a><br>
+      <strong>Postanschrift:</strong> Kurt-Schumacher-Straße 76, 67663 Kaiserslautern
+    </p>
+    <p>Wir antworten innerhalb eines Monats.</p>
+
+  </div>
 </body>
 </html>
